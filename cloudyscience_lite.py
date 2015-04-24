@@ -59,10 +59,12 @@ def cloudyscience(idnames):
 
         pdfpath = 'http://arxiv.org/pdf/'+idname
         out = open('temp/test.pdf','w')
+        print "Downloading paper..."
         out.write(urllib.urlopen(pdfpath).read())
         out.flush()
 
         # Convert the PDF to text
+        print "Processing..."
         os.system('pdftotext temp/test.pdf > temp/test.txt')
 
         # Turn into a Wordle
