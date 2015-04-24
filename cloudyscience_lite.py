@@ -22,6 +22,8 @@ import pyPdf
 from wordcloud import WordCloud,STOPWORDS
 import colorsys
 
+# # List of ID names to process
+# idnames = ["1306.3227"]
 
 def cloudyscience(idnames):
 
@@ -38,8 +40,6 @@ def cloudyscience(idnames):
            'k','l','m','n','o','p','q','r','s','t',
            'u','v','w','x','y','z']
 
-    # # List of ID names to process
-    # idnames = ["1306.3227"]
 
     # Shuffle randomly
     random.shuffle(idnames)
@@ -67,11 +67,10 @@ def cloudyscience(idnames):
 
         # Turn into a Wordle
         text = open('temp/test.txt').read()
-        outname = 'temp/wordle.png'
+        outname = '%s_wordle.png' % idname
 
         # Initalise wordcloud
         wc = WordCloud(stopwords=STOPWORDS.update(stp),width=500,height=500,prefer_horizontal=0.95,scale=1,color_func=cmap_color_func,font_path='DensiaSans.otf')
-        print wc
 
         # Check text    
         if len(text) > 0:
