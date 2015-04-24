@@ -1,7 +1,7 @@
 # Cloudy Science Lite - Wordclouds of arXiv astro-ph papers
 # Lite version to generate wordles for individual papers and return word stats
 # Vanessa A. Moss 24/04/2015
-# 
+# https://github.com/rhobslein/cloudysciencelite
 
 import urllib
 import os
